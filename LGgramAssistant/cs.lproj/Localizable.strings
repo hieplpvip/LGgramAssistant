@@ -1,0 +1,47 @@
+/* No comment provided by engineer. */
+"Backlight\nbright" = "Podsvícení\nplný jas";
+
+/* No comment provided by engineer. */
+"Backlight\ndimmed" = "Podsvícení\npoloviční jas";
+
+/* No comment provided by engineer. */
+"Backlight\noff" = "Podsvícení\nvypnuto";
+
+/* No comment provided by engineer. */
+"Microphone\nmuted" = "Mikrofon\nztlumen";
+
+/* No comment provided by engineer. */
+"Microphone\nunmuted" = "Mikrofon\naktivní";
+
+/* No comment provided by engineer. */
+"Screen\nextending" = "Obrazovka\nrozšířena";
+
+/* No comment provided by engineer. */
+"Screen\nmirroring" = "Obrazovka\nzrcadlena";
+
+/* No comment provided by engineer. */
+"Wi-Fi\ndisabled" = "Wi-Fi\nvypnuta";
+
+/* No comment provided by engineer. */
+"Wi-Fi\nenabled" = "Wi-Fi\nzapnuta";
+
+/* No comment provided by engineer. */
+"Bluetooth\ndisabled" = "Bluetooth\nvypnuto";
+
+/* No comment provided by engineer. */
+"Bluetooth\nenabled" = "Bluetooth\nzapnuto";
+
+/* No comment provided by engineer. */
+"Capslock\ndisabled" = "Caps Lock\nvypnutý";
+
+/* No comment provided by engineer. */
+"Capslock\nenabled" = "Caps Lock\nzapnutý";
+
+/* No comment provided by engineer. */
+"Function\nKeys" = "Funkce F1-F12\naktivní";
+
+/* No comment provided by engineer. */
+"Media\nKeys" = "Speciální funkce\naktivní";
+
+/* No comment provided by engineer. */
+"Version" = "Verze";

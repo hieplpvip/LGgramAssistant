@@ -1,0 +1,88 @@
+name: Release LG gram Assistant
+
+on:
+  push:
+    tags:
+      - "v*"
+
+env:
+  MACOS_APP_ARTIFACT: "LGgramAssistant.app"
+  MACOS_DMG_ARTIFACT: "LGgramAssistant.dmg"
+  XCBUILD_PATH: "build/Build/Products/Release"
+
+jobs:
+  Release:
+    runs-on: macos-10.15
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      # Download necessary software  and install CocoaPods
+      - name: Prepare Env
+        run: |
+          brew install graphicsmagick imagemagick
+          npm install --global create-dmg
+
+      # Import Certificates for sign
+      - name: Import Certificates
+        id: import_certs
+        uses: apple-actions/import-codesign-certs@v1
+        with:
+          p12-file-base64: ${{ secrets.CERTIFICATES_P12 }}
+          p12-password: ${{ secrets.CERTIFICATES_P12_PASSWORD }}
+
+      # Build LG gram Assistant
+      - name: Build
+        run: xcodebuild
+          -scheme LGgramAssistant
+          -destination "platform=macOS"
+          -configuration Release
+          -derivedDataPath build
+          CODE_SIGN_IDENTITY=- | xcpretty
+
+      # Check if LG gram Assistant is properly signed
+      - name: Check .app signature
+        run: codesign --verify -vvvv --deep --strict "${XCBUILD_PATH}/${MACOS_APP_ARTIFACT}"
+
+      # Create Apple Disk Image
+      - name: Create DMG
+        run: |
+          #cp LICENSE ${XCBUILD_PATH}/license.txt
+          cd ${XCBUILD_PATH}
+          create-dmg ${MACOS_APP_ARTIFACT} || true
+          mv *.dmg ${MACOS_DMG_ARTIFACT}
+          cd -
+          mkdir Assets
+          cp -R ${XCBUILD_PATH}/*.dmg Assets
+
+      # Get changes since last tag
+      - name: Generate Release Notes
+        run: |
+          echo '### The latest changes are:' >> ReleaseNotes.md
+          git log --oneline $(git describe --tags --abbrev=0 HEAD^)..HEAD | sed '/^$/d' >> ReleaseNotes.md
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          body_path: ReleaseNotes.md
+          draft: false
+          prerelease: false
+
+      - name: Upload Release Assets
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: Assets/LGgramAssistant.dmg
+          asset_name: LGgramAssistant.dmg
+          asset_content_type: application/x-apple-diskimage
