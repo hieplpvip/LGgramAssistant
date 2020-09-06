@@ -12,7 +12,7 @@ class HelperAppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         let runningApps = NSWorkspace.shared.runningApplications
         let isRunning = runningApps.contains {
-            $0.bundleIdentifier == "de.mszturc.LGgramAssistant"
+            $0.bundleIdentifier == "com.hieplpvip.LGgramAssistant"
         }
 
         if !isRunning {

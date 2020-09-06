@@ -11,7 +11,7 @@ import ServiceManagement
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     let statusItem = NSStatusBar.system.statusItem(withLength:NSStatusItem.squareLength)
-    let helperBundleName = "de.mszturc.AutoLaunchHelper"
+    let helperBundleName = "com.hieplpvip.AutoLaunchHelper"
 
     @IBOutlet weak var statusBarMenu: NSMenu!
     @IBOutlet weak var monitorCapslocksMenuItem: NSMenuItem!
