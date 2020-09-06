@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		568975A924928688005E92BD /* CoreBrightness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568975A824928688005E92BD /* CoreBrightness.framework */; };
+		4C68887D25056A05002785B9 /* CoreBrightness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C68887C25056A05002785B9 /* CoreBrightness.framework */; };
 		568975B324929B5F005E92BD /* NightShiftManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568975B224929B5F005E92BD /* NightShiftManager.swift */; };
 		C91E2345244E3780007A1962 /* DisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E2344244E3780007A1962 /* DisplayManager.swift */; };
 		C93B8425244A077000ECFFBD /* ShortcutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B8424244A077000ECFFBD /* ShortcutManager.swift */; };
@@ -49,8 +49,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4C68887C25056A05002785B9 /* CoreBrightness.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBrightness.framework; path = /System/Library/PrivateFrameworks/CoreBrightness.framework; sourceTree = "<absolute>"; };
 		568975A72492825D005E92BD /* CBBlueLightClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBBlueLightClient.h; sourceTree = "<group>"; };
-		568975A824928688005E92BD /* CoreBrightness.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreBrightness.framework; sourceTree = "<group>"; };
 		568975B224929B5F005E92BD /* NightShiftManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightShiftManager.swift; sourceTree = "<group>"; };
 		C91E2344244E3780007A1962 /* DisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayManager.swift; sourceTree = "<group>"; };
 		C93B8424244A077000ECFFBD /* ShortcutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutManager.swift; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				568975A924928688005E92BD /* CoreBrightness.framework in Frameworks */,
+				4C68887D25056A05002785B9 /* CoreBrightness.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,7 +123,7 @@
 		115363A5D0E7B98AE00FDE4E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				568975A824928688005E92BD /* CoreBrightness.framework */,
+				4C68887C25056A05002785B9 /* CoreBrightness.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -551,6 +551,10 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 			};
 			name = Debug;
 		};
@@ -581,6 +585,10 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "LGgramAssistant-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 			};
 			name = Release;
 		};
