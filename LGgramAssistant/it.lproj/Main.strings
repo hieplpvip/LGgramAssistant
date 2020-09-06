@@ -13,7 +13,7 @@
 /* Class = "NSMenuItem"; title = "Launch on Login"; ObjectID = "Lcb-4h-zk2"; */
 "Lcb-4h-zk2.title" = "Avvia al Login";
 
-/* Class = "NSMenuItem"; title = "Monitor Capslock"; ObjectID = "Nth-Jo-BIN"; */
+/* Class = "NSMenuItem"; title = "Monitor Caps Lock"; ObjectID = "Nth-Jo-BIN"; */
 "Nth-Jo-BIN.title" = "Monitoraggio Blocco Maiuscolo";
 
 /* Class = "NSMenuItem"; title = "Quit"; ObjectID = "Q77-Nx-rEG"; */

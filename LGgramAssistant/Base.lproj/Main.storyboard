@@ -23,7 +23,7 @@
                             </connections>
                         </menuItem>
                         <menuItem isSeparatorItem="YES" id="0kS-3Y-egi"/>
-                        <menuItem title="Monitor Capslock" id="Nth-Jo-BIN">
+                        <menuItem title="Monitor Caps Lock" id="Nth-Jo-BIN">
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>
                                 <action selector="monitorCapslockPressed:" target="Voe-Tx-rLC" id="PlA-Pc-S4R"/>

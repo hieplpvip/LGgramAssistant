@@ -44,9 +44,9 @@ final class CapslockMonitor {
 
         if isEnabled != lastState {
             if isEnabled {
-                HUD.showImage(Icons.capslockOn, status: NSLocalizedString("Capslock\nenabled", comment: ""))
+                HUD.showImage(Icons.capslockOn, status: NSLocalizedString("Caps Lock\nenabled", comment: ""))
             } else {
-                HUD.showImage(Icons.capslockOff, status: NSLocalizedString("Capslock\ndisabled", comment: ""))
+                HUD.showImage(Icons.capslockOff, status: NSLocalizedString("Caps Lock\ndisabled", comment: ""))
             }
         }
         lastState = isEnabled

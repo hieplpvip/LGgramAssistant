@@ -14,10 +14,10 @@
 "Bluetooth\nenabled" = "打开蓝牙";
 
 /* No comment provided by engineer. */
-"Capslock\ndisabled" = "关闭大写锁定";
+"Caps Lock\ndisabled" = "关闭大写锁定";
 
 /* No comment provided by engineer. */
-"Capslock\nenabled" = "开启大写锁定";
+"Caps Lock\nenabled" = "开启大写锁定";
 
 /* No comment provided by engineer. */
 "Screen\nextending" = "扩展屏幕";
