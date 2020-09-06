@@ -21,13 +21,11 @@ typedef struct {
     Time toTime;
 } Schedule;
 
-
 typedef struct {
     float minCCT;
     float maxCCT;
     float midCCT;
 } CCTRange;
-
 
 typedef struct {
     char active;
@@ -51,6 +49,5 @@ typedef struct {
 - (BOOL)getCCTRange:(CCTRange *) arg1;
 - (BOOL)getBlueLightStatus:(StatusData *)arg1;
 @end
-
 
 #endif /* CBBlueLightClient_h */

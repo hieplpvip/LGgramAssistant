@@ -20,18 +20,6 @@
 "Capslock\nenabled" = "Feststelltaste\naktiv";
 
 /* No comment provided by engineer. */
-"Function\nKeys" = "Funktionstasten\naktiv";
-
-/* No comment provided by engineer. */
-"Media\nKeys" = "Medientasten\naktiv";
-
-/* No comment provided by engineer. */
-"Microphone\nmuted" = "Mikrofon stumm";
-
-/* No comment provided by engineer. */
-"Microphone\nunmuted" = "Mikrofon\naktiv";
-
-/* No comment provided by engineer. */
 "Screen\nextending" = "Bildschirm erweitert";
 
 /* No comment provided by engineer. */
@@ -45,4 +33,3 @@
 
 /* No comment provided by engineer. */
 "Wi-Fi\nenabled" = "WLAN aktiviert";
-

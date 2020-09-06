@@ -8,27 +8,25 @@
 import Foundation
 
 final class DisplayManager {
-    
     static func toggleMirroring() {
         isDisplayMirrored() ? disableHardwareMirroring() : enableHardwareMirroring()
     }
-    
+
     static func isDisplayMirrored() -> Bool {
         return CGDisplayIsInMirrorSet(CGMainDisplayID()) > 0
     }
-    
+
     static func disableHardwareMirroring() {
         configureDisplay { displayConfig in
             CGConfigureDisplayMirrorOfDisplay(displayConfig, CGMainDisplayID(), kCGNullDirectDisplay).handleError()
         }
     }
-    
+
     static func enableHardwareMirroring() {
         let displayCount = getDisplayCount()
-        if(displayCount > 1){
-            
+        if (displayCount > 1) {
             let mainDisplayId = CGMainDisplayID()
-            
+
             configureDisplay { displayConfig in
                 displayIds(for: displayCount)
                     .filter { $0 != mainDisplayId }
@@ -36,25 +34,24 @@ final class DisplayManager {
             }
         }
     }
-    
+
     static func getDisplayCount() -> UInt32 {
         var displayCount: UInt32 = 0
         CGGetActiveDisplayList(0, nil, &displayCount).handleError()
         return displayCount
     }
-    
+
     private static func configureDisplay(handler: (_ displayConfig: CGDisplayConfigRef?) -> Void) {
-        
         var displayConfig: CGDisplayConfigRef?
         CGBeginDisplayConfiguration(&displayConfig).handleError()
         assert(displayConfig != nil)
         handler(displayConfig)
-        
+
         if CGCompleteDisplayConfiguration(displayConfig, .permanently).require() != .success {
             CGCancelDisplayConfiguration(displayConfig)
         }
     }
-    
+
     private static func displayIds(for displayCount: UInt32) -> [CGDirectDisplayID] {
         let allocatedDisplayCount = Int(displayCount)
         var displaysIds = Array<CGDirectDisplayID>(repeating: kCGNullDirectDisplay, count: allocatedDisplayCount)
@@ -64,12 +61,11 @@ final class DisplayManager {
 }
 
 extension CGError {
-    
     func require() -> CGError {
         assert(self == .success, "reason: \(self)")
         return self
     }
-    
+
     func handleError() {
         assert(self == .success, "reason: \(self)")
     }

@@ -9,24 +9,23 @@ import Foundation
 import CoreWLAN
 
 final class WifiManager {
-    
     private static var isRunning: Bool = false
-    
+
     static func disableWifi() {
         toggleMasterSwitch(false)
     }
-    
+
     static func enableWifi() {
         toggleMasterSwitch(true)
     }
-    
+
     static func isPowered() -> Bool? {
         if(isRunning){
             return nil
         }
         return CWWiFiClient.shared().interface()?.powerOn() ?? false
     }
-    
+
     private static func toggleMasterSwitch(_ status:Bool) {
         if(isRunning){
             return
@@ -45,7 +44,6 @@ final class WifiManager {
 }
 
 extension DispatchQueue {
-
     static func background(delay: Double = 0.0, background: (()->Void)? = nil, completion: (() -> Void)? = nil) {
         DispatchQueue.global(qos: .background).async {
             background?()
@@ -56,5 +54,4 @@ extension DispatchQueue {
             }
         }
     }
-
 }

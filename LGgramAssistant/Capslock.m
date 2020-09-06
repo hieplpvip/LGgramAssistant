@@ -11,20 +11,18 @@
 #include <IOKit/hidsystem/IOHIDParameter.h>
 #include <CoreFoundation/CoreFoundation.h>
 #include <stdbool.h>
-
 #include <libgen.h>
 
 /*!
-   @brief Gets the current Capslock state
+    @brief Gets the current Capslock state
 
-   @discussion This method can be used the gets the initial Capslock state whhen the application is first run. Needs to be done in Objective-C as Swift can only listen for modifier key presses only do determine Capslock being pressed.
+    @discussion This method can be used the gets the initial Capslock state whhen the application is first run. Needs to be done in Objective-C as Swift can only listen for modifier key presses only do determine Capslock being pressed.
 
-               To use it, simply call getCapslockState()
+                To use it, simply call getCapslockState()
 
-   @return true if Capslock is enabled, false otherwise
+    @return true if Capslock is enabled, false otherwise
 */
-bool getCapslockState()
-{
+bool getCapslockState() {
     kern_return_t kr;
     io_service_t ios;
     io_connect_t ioc;
@@ -33,27 +31,26 @@ bool getCapslockState()
 
     mdict = IOServiceMatching(kIOHIDSystemClass);
     ios = IOServiceGetMatchingService(kIOMasterPortDefault, (CFDictionaryRef) mdict);
-    if (!ios)
-    {
-        if (mdict)
+    if (!ios) {
+        if (mdict) {
             CFRelease(mdict);
+        }
         return false;
     }
 
     kr = IOServiceOpen(ios, mach_task_self(), kIOHIDParamConnectType, &ioc);
     IOObjectRelease(ios);
-    if (kr != KERN_SUCCESS)
-    {
+    if (kr != KERN_SUCCESS) {
         return false;
     }
 
     kr = IOHIDGetModifierLockState(ioc, kIOHIDCapsLockState, &state);
-    if (kr != KERN_SUCCESS)
-    {
+    if (kr != KERN_SUCCESS) {
         IOServiceClose(ioc);
         return false;
     }
 
     IOServiceClose(ioc);
+
     return (bool)state;
 }

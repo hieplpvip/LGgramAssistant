@@ -14,7 +14,7 @@ class HelperAppDelegate: NSObject, NSApplicationDelegate {
         let isRunning = runningApps.contains {
             $0.bundleIdentifier == "de.mszturc.LGgramAssistant"
         }
-        
+
         if !isRunning {
             var path = Bundle.main.bundlePath as NSString
             for _ in 1...4 {
@@ -24,4 +24,3 @@ class HelperAppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 }
-

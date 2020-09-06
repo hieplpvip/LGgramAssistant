@@ -9,23 +9,22 @@
 import Foundation
 
 final class NightShiftManager {
-    
     private static let blueLightClient = CBBlueLightClient()
-    
+
     static func toggleCBBlueLight() {
         isEnabled() ? disable() : enable()
     }
-    
+
     static func isEnabled() -> Bool {
         var blueLightStatus : StatusData = StatusData.init()
         blueLightClient.getBlueLightStatus(&blueLightStatus)
         return blueLightStatus.enabled == 1
     }
-    
+
     static func disable() {
         blueLightClient.setEnabled(false)
     }
-    
+
     static func enable() {
         blueLightClient.setEnabled(true)
     }

@@ -1,16 +1,4 @@
 /* No comment provided by engineer. */
-"Capslock\ndisabled" = "关闭大写锁定";
-
-/* No comment provided by engineer. */
-"Capslock\nenabled" = "开启大写锁定";
-
-/* No comment provided by engineer. */
-"Media\nKeys" = "开启媒体键";
-
-/* No comment provided by engineer. */
-"Function\nKeys" = "开启功能键";
-
-/* No comment provided by engineer. */
 "Backlight\nbright" = "键盘背光";
 
 /* No comment provided by engineer. */
@@ -26,10 +14,10 @@
 "Bluetooth\nenabled" = "打开蓝牙";
 
 /* No comment provided by engineer. */
-"Microphone\nmuted" = "麦克风静音";
+"Capslock\ndisabled" = "关闭大写锁定";
 
 /* No comment provided by engineer. */
-"Microphone\nunmuted" = "麦克风开启";
+"Capslock\nenabled" = "开启大写锁定";
 
 /* No comment provided by engineer. */
 "Screen\nextending" = "扩展屏幕";
@@ -45,5 +33,3 @@
 
 /* No comment provided by engineer. */
 "Wi-Fi\nenabled" = "打开 Wi-Fi";
-
-

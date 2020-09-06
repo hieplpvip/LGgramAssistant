@@ -11,7 +11,6 @@ import AppKit
 typealias ProgressHUDDismissCompletion = () -> Void
 
 class HUD: NSView {
-
     // MARK: - Lifecycle
 
     static let shared = HUD()
@@ -38,7 +37,6 @@ class HUD: NSView {
         window.level = .floating
         window.backgroundColor = .clear
         windowController = NSWindowController(window: window)
-
     }
 
     required init?(coder decoder: NSCoder) {
@@ -52,13 +50,12 @@ class HUD: NSView {
 
     /// The amount of space between the HUD edge and the HUD elements (label, indicator or custom view)
     private var margin: CGFloat = 16.0
-    
+
     /// The amount of space between the HUD elements (label, indicator or custom view)
     private var padding: CGFloat = 4.0
 
     /// The corner radius for th HUD
     private var cornerRadius: CGFloat = 15.0
-    
 
     // MARK: - Presentation
 
@@ -69,7 +66,7 @@ class HUD: NSView {
         }
         HUD.shared.setStatus(status)
     }
-    
+
     /// Presents a HUD with an image + status, and dismisses the HUD a little bit later
     class func showImage(_ image: NSImage, status: String) {
         let imageView = NSImageView(frame: NSRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
@@ -115,20 +112,20 @@ class HUD: NSView {
             needsDisplay = true
         }
     }
-    
+
     private var hudView: NSView? {
         windowController?.showWindow(self)
         return windowController?.window?.contentView
     }
+    private var windowController: NSWindowController?
     private let minimumDismissTimeInterval: TimeInterval = 2
     private let maximumDismissTimeInterval: TimeInterval = 5
-    private var windowController: NSWindowController?
 
     // MARK: - Private Show & Hide methods
 
     private func show(withStatus status: String, imageView: NSView) {
         guard let view = hudView else { return }
-        
+
         if isHidden {
             frame = view.frame
             view.addSubview(self)
@@ -151,7 +148,7 @@ class HUD: NSView {
             alphaValue = 1.0
         }
     }
-    
+
     private func hide(_ animated: Bool) {
         NSObject.cancelPreviousPerformRequests(withTarget: self)
         if animated {
@@ -206,7 +203,6 @@ class HUD: NSView {
     // MARK: - Layout & Drawing
 
     func layoutSubviews() {
-
         // Entirely cover the parent view
         frame = superview?.bounds ?? .zero
 
@@ -214,7 +210,7 @@ class HUD: NSView {
         let maxWidth = bounds.size.width - margin * 4
         var totalSize = CGSize.zero
         var indicatorFrame = indicator?.bounds ?? .zero
-        
+
         indicatorFrame.size.width = min(indicatorFrame.size.width, maxWidth)
         totalSize.width = max(totalSize.width, indicatorFrame.size.width)
         totalSize.height += indicatorFrame.size.height
@@ -291,5 +287,4 @@ class HUD: NSView {
 
         NSGraphicsContext.restoreGraphicsState()
     }
-
 }

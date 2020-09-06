@@ -9,9 +9,6 @@
 import Cocoa
 
 final class Icons {
-    
-    static let mute = load(iconName: "micOff")
-    static let unmute = load(iconName: "micOn")
     static let wlanOn = load(iconName: "wlanOn")
     static let wlanOff = load(iconName: "wlanOff")
     static let mirroring = load(iconName: "mirroring")
@@ -23,9 +20,7 @@ final class Icons {
     static let backlightBright = load(iconName: "backlightBright")
     static let capslockOn = load(iconName: "capslockOn")
     static let capslockOff = load(iconName: "capslockOff")
-    static let fnlockOn = load(iconName: "fnlockon")
-    static let fnlockOff = load(iconName: "fnlockoff")
-    
+
     private static func load(iconName: String) -> NSImage {
         let icon = NSImage(named: NSImage.Name(iconName))
         icon?.size = NSSize(width: 128, height: 128)
@@ -33,5 +28,3 @@ final class Icons {
         return icon!
     }
 }
-
-

@@ -12,7 +12,6 @@
 		C91E2345244E3780007A1962 /* DisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E2344244E3780007A1962 /* DisplayManager.swift */; };
 		C93B8425244A077000ECFFBD /* ShortcutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B8424244A077000ECFFBD /* ShortcutManager.swift */; };
 		C93B8458244DAA4500ECFFBD /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B8457244DAA4500ECFFBD /* HUD.swift */; };
-		C93B8461244E0DB700ECFFBD /* MuteMicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B8460244E0DB700ECFFBD /* MuteMicManager.swift */; };
 		C93B8467244E20D500ECFFBD /* WifiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B8466244E20D500ECFFBD /* WifiManager.swift */; };
 		C93E0A8D24681AE000041485 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E0A8C24681AE000041485 /* Key.swift */; };
 		C93E0A9124681B4800041485 /* ShortcutMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E0A9024681B4800041485 /* ShortcutMonitor.swift */; };
@@ -56,7 +55,6 @@
 		C91E2344244E3780007A1962 /* DisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayManager.swift; sourceTree = "<group>"; };
 		C93B8424244A077000ECFFBD /* ShortcutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutManager.swift; sourceTree = "<group>"; };
 		C93B8457244DAA4500ECFFBD /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
-		C93B8460244E0DB700ECFFBD /* MuteMicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuteMicManager.swift; sourceTree = "<group>"; };
 		C93B8466244E20D500ECFFBD /* WifiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiManager.swift; sourceTree = "<group>"; };
 		C93E0A8C24681AE000041485 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		C93E0A9024681B4800041485 /* ShortcutMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutMonitor.swift; sourceTree = "<group>"; };
@@ -180,7 +178,6 @@
 				C947BB06247AFECB00E6AF14 /* BluetoothManager.swift */,
 				F34E40FF24B1BADF00A7983F /* Capslock.m */,
 				F397902E24A2916D009C1F22 /* CapslockMonitor.swift */,
-				C93B8460244E0DB700ECFFBD /* MuteMicManager.swift */,
 				568975B224929B5F005E92BD /* NightShiftManager.swift */,
 				C93B8466244E20D500ECFFBD /* WifiManager.swift */,
 				C91E2344244E3780007A1962 /* DisplayManager.swift */,
@@ -329,7 +326,6 @@
 				C91E2345244E3780007A1962 /* DisplayManager.swift in Sources */,
 				C93B8425244A077000ECFFBD /* ShortcutManager.swift in Sources */,
 				C93B8458244DAA4500ECFFBD /* HUD.swift in Sources */,
-				C93B8461244E0DB700ECFFBD /* MuteMicManager.swift in Sources */,
 				FC56DEBE1EE98AC7001ACE3F /* AppDelegate.swift in Sources */,
 				C93E0A8D24681AE000041485 /* Key.swift in Sources */,
 				C93E0A9124681B4800041485 /* ShortcutMonitor.swift in Sources */,
