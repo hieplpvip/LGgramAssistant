@@ -6,8 +6,6 @@
 //  Copyright © 2020 Matthäus Szturc. All rights reserved.
 //
 
-import Foundation
-
 final class NightShiftManager {
     private static let blueLightClient = CBBlueLightClient()
 

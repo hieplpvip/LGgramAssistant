@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4C68887D25056A05002785B9 /* CoreBrightness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C68887C25056A05002785B9 /* CoreBrightness.framework */; };
 		568975B324929B5F005E92BD /* NightShiftManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568975B224929B5F005E92BD /* NightShiftManager.swift */; };
+		8FB789FE2507CA5D00F0AE4F /* Sleep.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB789FD2507CA5D00F0AE4F /* Sleep.m */; };
+		8FB78A002507CB0900F0AE4F /* SleepManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB789FF2507CB0900F0AE4F /* SleepManager.swift */; };
 		C91E2345244E3780007A1962 /* DisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E2344244E3780007A1962 /* DisplayManager.swift */; };
 		C93B8425244A077000ECFFBD /* ShortcutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B8424244A077000ECFFBD /* ShortcutManager.swift */; };
 		C93B8458244DAA4500ECFFBD /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B8457244DAA4500ECFFBD /* HUD.swift */; };
@@ -52,6 +54,8 @@
 		4C68887C25056A05002785B9 /* CoreBrightness.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBrightness.framework; path = /System/Library/PrivateFrameworks/CoreBrightness.framework; sourceTree = "<absolute>"; };
 		568975A72492825D005E92BD /* CBBlueLightClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBBlueLightClient.h; sourceTree = "<group>"; };
 		568975B224929B5F005E92BD /* NightShiftManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightShiftManager.swift; sourceTree = "<group>"; };
+		8FB789FD2507CA5D00F0AE4F /* Sleep.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sleep.m; sourceTree = "<group>"; };
+		8FB789FF2507CB0900F0AE4F /* SleepManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepManager.swift; sourceTree = "<group>"; };
 		C91E2344244E3780007A1962 /* DisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayManager.swift; sourceTree = "<group>"; };
 		C93B8424244A077000ECFFBD /* ShortcutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutManager.swift; sourceTree = "<group>"; };
 		C93B8457244DAA4500ECFFBD /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
@@ -177,8 +181,10 @@
 				C93B8424244A077000ECFFBD /* ShortcutManager.swift */,
 				C947BB06247AFECB00E6AF14 /* BluetoothManager.swift */,
 				F34E40FF24B1BADF00A7983F /* Capslock.m */,
+				8FB789FD2507CA5D00F0AE4F /* Sleep.m */,
 				F397902E24A2916D009C1F22 /* CapslockMonitor.swift */,
 				568975B224929B5F005E92BD /* NightShiftManager.swift */,
+				8FB789FF2507CB0900F0AE4F /* SleepManager.swift */,
 				C93B8466244E20D500ECFFBD /* WifiManager.swift */,
 				C91E2344244E3780007A1962 /* DisplayManager.swift */,
 				C9DFD0242451BAA2000103A2 /* IconProvider.swift */,
@@ -329,11 +335,13 @@
 				FC56DEBE1EE98AC7001ACE3F /* AppDelegate.swift in Sources */,
 				C93E0A8D24681AE000041485 /* Key.swift in Sources */,
 				C93E0A9124681B4800041485 /* ShortcutMonitor.swift in Sources */,
+				8FB789FE2507CA5D00F0AE4F /* Sleep.m in Sources */,
 				C93E0A9324681B9100041485 /* Shortcut.swift in Sources */,
 				C93B8467244E20D500ECFFBD /* WifiManager.swift in Sources */,
 				F397902F24A2916D009C1F22 /* CapslockMonitor.swift in Sources */,
 				C93E0A9724685A2300041485 /* Extension.Carbon.swift in Sources */,
 				C947BB07247AFECB00E6AF14 /* BluetoothManager.swift in Sources */,
+				8FB78A002507CB0900F0AE4F /* SleepManager.swift in Sources */,
 				C9DFD0252451BAA2000103A2 /* IconProvider.swift in Sources */,
 				C9404795246D5B2F00C90C38 /* AboutViewController.swift in Sources */,
 				568975B324929B5F005E92BD /* NightShiftManager.swift in Sources */,

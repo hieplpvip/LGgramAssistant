@@ -9,3 +9,6 @@ int IOBluetoothPreferenceGetControllerPowerState();
 void IOBluetoothPreferenceSetControllerPowerState(int state);
 
 bool getCapslockState();
+
+bool _loadOSDFramework();
+void _goToSleep();

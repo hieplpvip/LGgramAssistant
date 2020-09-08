@@ -14,12 +14,12 @@ final class ShortcutManager {
     static let disableBluetoothShortcut = Shortcut(key: .f19, modifiers: [.leftShift])
     static let systemPrefsShortcut = Shortcut(key: .f17, modifiers: [])
     static let nightShiftShortcut = Shortcut(key: .f18, modifiers: [])
+    static let sleepShortcut = Shortcut(key: .f20, modifiers: [])
     // static let backlightOffShortcut = Shortcut(key: .f16, modifiers: [.leftShift])
     // static let backlightDimmedShortcut = Shortcut(key: .f16, modifiers: [.rightShift])
     // static let backlightBrightShortcut = Shortcut(key: .f19, modifiers: [.leftShift])
 
     static func register() {
-
         ShortcutMonitor.shared.register(systemPrefsShortcut, withAction: {
             startApp(withBundleIdentifier: "com.apple.systempreferences")
         })
@@ -36,7 +36,10 @@ final class ShortcutManager {
 
         ShortcutMonitor.shared.register(nightShiftShortcut, withAction: {
             NightShiftManager.toggleCBBlueLight()
+        })
 
+        ShortcutMonitor.shared.register(sleepShortcut, withAction: {
+            SleepManager.goToSleep()
         })
 
         ShortcutMonitor.shared.register(disableWlanShortcut, withAction: {
