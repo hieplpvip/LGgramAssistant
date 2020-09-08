@@ -15,9 +15,9 @@ final class ShortcutManager {
     static let systemPrefsShortcut = Shortcut(key: .f17, modifiers: [])
     static let nightShiftShortcut = Shortcut(key: .f18, modifiers: [])
     static let sleepShortcut = Shortcut(key: .f20, modifiers: [])
-    // static let backlightOffShortcut = Shortcut(key: .f16, modifiers: [.leftShift])
-    // static let backlightDimmedShortcut = Shortcut(key: .f16, modifiers: [.rightShift])
-    // static let backlightBrightShortcut = Shortcut(key: .f19, modifiers: [.leftShift])
+    static let backlightOffShortcut = Shortcut(key: .f16, modifiers: [.leftShift])
+    static let backlightDimmedShortcut = Shortcut(key: .f16, modifiers: [.rightShift])
+    static let backlightBrightShortcut = Shortcut(key: .f19, modifiers: [.leftShift])
 
     static func register() {
         ShortcutMonitor.shared.register(systemPrefsShortcut, withAction: {
@@ -70,17 +70,17 @@ final class ShortcutManager {
             }
         })
 
-        // ShortcutMonitor.shared.register(backlightOffShortcut, withAction: {
-        //     HUD.showImage(Icons.backlightOff, status: NSLocalizedString("Backlight\noff", comment: ""))
-        // })
+        ShortcutMonitor.shared.register(backlightOffShortcut, withAction: {
+            HUD.showImage(Icons.backlightOff, status: NSLocalizedString("Backlight\noff", comment: ""))
+        })
 
-        // ShortcutMonitor.shared.register(backlightDimmedShortcut, withAction: {
-        //     HUD.showImage(Icons.backlightDimmed, status: NSLocalizedString("Backlight\ndimmed", comment: ""))
-        // })
+        ShortcutMonitor.shared.register(backlightDimmedShortcut, withAction: {
+            HUD.showImage(Icons.backlightDimmed, status: NSLocalizedString("Backlight\ndimmed", comment: ""))
+        })
 
-        // ShortcutMonitor.shared.register(backlightBrightShortcut, withAction: {
-        //     HUD.showImage(Icons.backlightBright, status: NSLocalizedString("Backlight\nbright", comment: ""))
-        // })
+        ShortcutMonitor.shared.register(backlightBrightShortcut, withAction: {
+            HUD.showImage(Icons.backlightBright, status: NSLocalizedString("Backlight\nbright", comment: ""))
+        })
     }
 
     static func unregister() {
